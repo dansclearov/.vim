@@ -4,6 +4,9 @@ set nocompatible
 " Set leader key from '\' to ' '
 let mapleader = " "
 
+" Make the backspace behave in a normal way
+set backspace=indent,eol,start
+
 set encoding=utf-8
 
 syntax enable
@@ -17,20 +20,19 @@ set expandtab " expand tabs into spaces
 
 set autoread
 
-set ruler
-
-set showmatch
-
 " Remove annoying beeping sound
 set visualbell
 set noerrorbells
 
+" In the lower right corner of the window
+set showcmd " display an incomplete command
+set ruler " display cursor position
+
 set number " set line numbers
-set showcmd
 set cursorline
 set wildmenu
-set lazyredraw
-set showmatch
+set lazyredraw " redraw only when needed
+set showmatch " briefly jump to the matching bracket when one is inserted
 set title " change the window's title to a more useful one
 
 " Plugins and indentation based on filetype
@@ -38,11 +40,12 @@ filetype plugin indent on
 
 set history=500
 
-set incsearch
-set hlsearch
-set smartcase
+set incsearch " incremental search
+set hlsearch " highlight mathes when searcing
+set ignorecase
+set smartcase " overrides the ignorecase option when the search pattern contains uppercase characters
 
-set autoindent
+set autoindent " use the indent of the previous line to indent a newly created line
 set smartindent
 set wrap
 
