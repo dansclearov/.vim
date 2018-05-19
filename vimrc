@@ -56,10 +56,10 @@ set wrap
 nnoremap j gj
 nnoremap k gk
 
-nnoremap <leader>ev :vsp $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-nnoremap <leader>ez :vsp ~/.zshrc<cr>
+nnoremap <leader>ez :vsplit ~/.zshrc<cr>
 
 " Clear the screen
 map <silent><leader><cr> :nohlsearch<cr>
