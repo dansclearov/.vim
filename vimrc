@@ -4,16 +4,17 @@ set nocompatible
 " Set leader key from '\' to ' '
 let mapleader = " "
 
-" Make the backspace behave in a normal way
-set backspace=indent,eol,start
-
-set encoding=utf-8
-
 syntax enable
 
 set background=dark
 colorscheme solarized
 
+" Make the backspace behave in a normal way
+set backspace=indent,eol,start
+
+set encoding=utf-8
+
+set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab " expand tabs into spaces
@@ -24,16 +25,19 @@ set autoread
 set visualbell
 set noerrorbells
 
-" In the lower right corner of the window
+" In the lower part of the window
 set showcmd " display an incomplete command
 set ruler " display cursor position
+set showmode
 
 set number " set line numbers
 set cursorline
-set wildmenu
+set wildmenu " set command-line completion
+set ttyfast
 set lazyredraw " redraw only when needed
 set showmatch " briefly jump to the matching bracket when one is inserted
 set title " change the window's title to a more useful one
+set scrolloff=3 " number of lines to keep above/below the cursor
 
 " Plugins and indentation based on filetype
 filetype plugin indent on
