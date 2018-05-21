@@ -18,7 +18,6 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab " expand tabs into spaces
-
 set autoread
 
 " Remove annoying beeping sound
@@ -30,7 +29,7 @@ set showcmd " display an incomplete command
 set ruler " display cursor position
 set showmode
 
-set number " set line numbers
+set number
 set cursorline
 set wildmenu " set command-line completion
 set ttyfast
@@ -51,15 +50,16 @@ set smartcase " overrides the ignorecase option when the search pattern contains
 
 set autoindent " use the indent of the previous line to indent a newly created line
 set smartindent
-set wrap
+set wrap " wrap long lines
 
-nnoremap j gj
-nnoremap k gk
+set matchpairs+=<:> " add the <:> pair to the pairs string (use % to jump between pairs)
+
+" More intuitive j and k navigation, see (https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/)
+nnoremap <silent> <expr> j v:count ? 'j' : 'gj'
+nnoremap <silent> <expr> k v:count ? 'k' : 'gk'
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
-nnoremap <leader>ez :vsplit ~/.zshrc<cr>
 
 " Clear the screen
 map <silent><leader><cr> :nohlsearch<cr>
