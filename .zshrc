@@ -2,14 +2,15 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH=/home/dan/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+GEOMETRY_PROMPT_PREFIX="" # remove the new line
+ZSH_THEME="geometry/geometry"
 
 plugins=(
   git # common git aliases
   zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting # fish-like features
 )
 source $ZSH/oh-my-zsh.sh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4' # highlighting which blends better with the agnoster theme
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4' # highlighting which blends better with my theme
 
 export EDITOR="vim"
 
