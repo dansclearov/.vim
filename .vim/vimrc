@@ -90,7 +90,8 @@ endif
 " All plugins need to be listed between these two lines
 " TODO: install and get confortable with these plugins after learning vim well enough
 call plug#begin()
-Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox' " theme
+Plug 'simnalamburt/vim-mundo' " version control using undo ;)
 " Plug 'reedes/vim-pencil'
 " Plug 'godlygeek/tabular'
 " Plug 'junegunn/goyo.vim'
