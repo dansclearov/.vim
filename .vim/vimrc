@@ -1,3 +1,4 @@
+" General Settings {{{
 " Disable Vi compatibility (recommended to be the first line)
 set nocompatible
 
@@ -5,9 +6,7 @@ set nocompatible
 let mapleader = " "
 
 syntax enable
-
-set background=dark
-colorscheme solarized
+set termguicolors " true color
 
 " Make the backspace behave in a normal way
 set backspace=indent,eol,start
@@ -30,6 +29,7 @@ set ruler " display cursor position
 set showmode
 
 set number
+set relativenumber
 set cursorline
 set wildmenu " set command-line completion
 set ttyfast
@@ -53,7 +53,8 @@ set smartindent
 set wrap " wrap long lines
 
 set matchpairs+=<:> " add the <:> pair to the pairs string (use % to jump between pairs)
-
+" }}}
+" Mappings {{{
 " More intuitive j and k navigation, see (https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/)
 nnoremap <silent> <expr> j v:count ? 'j' : 'gj'
 nnoremap <silent> <expr> k v:count ? 'k' : 'gk'
@@ -72,17 +73,20 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
+" }}}
+" Vim-plug {{{
 " Install vim plug if not already installed
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
+" }}}
+" Plugins {{{
 " All plugins need to be listed between these two lines
 " TODO: install and get confortable with these plugins after learning vim well enough
 call plug#begin()
+Plug 'morhetz/gruvbox'
 " Plug 'reedes/vim-pencil'
 " Plug 'godlygeek/tabular'
 " Plug 'junegunn/goyo.vim'
@@ -91,3 +95,12 @@ call plug#begin()
 " Plug 'bling/vim-airline'
 " Plug 'tpope/vim-surround'
 call plug#end()
+" }}}
+" Plugin Configurations {{{
+" Gruvbox {{{
+let g:gruvbox_italic=1
+set background=dark
+colorscheme gruvbox
+" }}}
+" }}}
+" vim:foldmethod=marker:foldlevel=0
