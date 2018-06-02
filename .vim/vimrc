@@ -41,6 +41,10 @@ set scrolloff=3 " number of lines to keep above/below the cursor
 " Plugins and indentation based on filetype
 filetype plugin indent on
 
+" Keep everything centralized
+set undodir=~/.vim/.undo//
+set directory=~/.vim/.swp//
+
 set history=500
 
 set incsearch " incremental search
