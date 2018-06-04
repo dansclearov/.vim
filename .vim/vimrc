@@ -94,12 +94,12 @@ Plug 'morhetz/gruvbox' " theme
 Plug 'simnalamburt/vim-mundo' " version control using undo ;)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
 Plug 'junegunn/fzf.vim' " fzf bindings
+" Plug 'mileszs/ack.vim'
 " Plug 'reedes/vim-pencil'
 " Plug 'godlygeek/tabular'
 " Plug 'junegunn/goyo.vim'
 " Plug 'junegunn/limelight.vim'
 " Plug 'plasticboy/vim-markdown'
-" Plug 'bling/vim-airline'
 " Plug 'tpope/vim-surround'
 call plug#end()
 " }}}
