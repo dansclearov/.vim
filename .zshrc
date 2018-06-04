@@ -27,3 +27,6 @@ alias dcp='g++ -std=c++14 -Wall -Wextra -lm'
 # For jekyll
 alias release="JEKYLL_ENV=production bundle exec jekyll build -d 'docs'"
 alias devel="bundle exec jekyll liveserve --drafts"
+
+# Fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
