@@ -17,19 +17,19 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab " expand tabs into spaces
-set autoread
+set autoread " auto read if the file was changed externally
 
 " Remove annoying beeping sound
 set visualbell
 set noerrorbells
 
-" In the lower part of the window
-set showcmd " display an incomplete command
-set ruler " display cursor position
-set showmode
+" Status line
+set laststatus=2 " always show the status line
+set noruler " don't display cursor position
+set noshowmode " who needs the mode anyway
 
 set number
-set relativenumber
+set relativenumber " numbers relative to the current line
 set cursorline
 set wildmenu " set command-line completion
 set ttyfast
@@ -94,7 +94,6 @@ Plug 'morhetz/gruvbox' " theme
 Plug 'simnalamburt/vim-mundo' " version control using undo ;)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
 Plug 'junegunn/fzf.vim' " fzf bindings
-" Plug 'mileszs/ack.vim'
 " Plug 'reedes/vim-pencil'
 " Plug 'godlygeek/tabular'
 " Plug 'junegunn/goyo.vim'
