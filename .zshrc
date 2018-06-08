@@ -29,4 +29,8 @@ alias release="JEKYLL_ENV=production bundle exec jekyll build -d 'docs'"
 alias devel="bundle exec jekyll liveserve --drafts"
 
 # Fzf
+# <C-T> - paste the selected files and directories in the terminal
+# <C-R> - paste the selected command from history into the terminal
+# <A-C> - cd into the selected directory
+# some/path/**<TAB> - autocompletion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

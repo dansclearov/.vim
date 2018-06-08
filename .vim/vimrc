@@ -35,6 +35,7 @@ set wildmenu " set command-line completion
 set ttyfast
 set lazyredraw " redraw only when needed
 set showmatch " briefly jump to the matching bracket when one is inserted
+set matchtime=1 " match faster
 set title " change the window's title to a more useful one
 set scrolloff=3 " number of lines to keep above/below the cursor
 
@@ -96,9 +97,19 @@ Plug 'morhetz/gruvbox' " theme
 Plug 'simnalamburt/vim-mundo' " version control using undo ;)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
 Plug 'junegunn/fzf.vim' " fzf bindings
+Plug 'jiangmiao/auto-pairs' " auto close ', (, [, {, etc.
+Plug 'junegunn/goyo.vim' " for writing prose
+Plug 'airblade/vim-gitgutter' " useful git information
+" Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-unimpaired'
+" Plug 'tpope/vim-surround'
+" Plug 'mileszs/ack.vim'
+" Plug 'w0rp/ale'
+" Plug 'scrooloose/nerdtree'
 " Plug 'reedes/vim-pencil'
 " Plug 'godlygeek/tabular'
-" Plug 'junegunn/goyo.vim'
 " Plug 'junegunn/limelight.vim'
 " Plug 'plasticboy/vim-markdown'
 " Plug 'tpope/vim-surround'
@@ -109,6 +120,26 @@ call plug#end()
 let g:gruvbox_italic=1
 set background=dark
 colorscheme gruvbox
+" }}}
+" Fzf Vim {{{
+map <leader>f :Files<cr>
+map <leader>b :Buffers<cr>
+" }}}
+" Goyo {{{
+function! s:goyo_enter()
+  silent !tmux set status off
+  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set background=light
+endfunction
+
+function! s:goyo_leave()
+  silent !tmux set status on
+  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set background=dark
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " }}}
 " }}}
 " vim:foldmethod=marker:foldlevel=0
