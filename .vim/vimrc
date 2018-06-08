@@ -41,8 +41,11 @@ set scrolloff=3 " number of lines to keep above/below the cursor
 " Plugins and indentation based on filetype
 filetype plugin indent on
 
-" Keep swap files centralized in case of crash
+set undofile " persistent undo
+
+" Keep swap and undo files centralized
 set directory=~/.vim/.swp//
+set undodir=~/.vim/.undo//
 
 set history=500
 

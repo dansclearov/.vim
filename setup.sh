@@ -8,6 +8,7 @@ git submodule update
 # Vim
 ln -rs .vim/ ~/.vim/
 mkdir ~/.vim/.swp/
+mkdir ~/.vim/.undo/
 
 # Tmux
 ln -rs .tmux/plugins/ ~/.tmux/plugins/
