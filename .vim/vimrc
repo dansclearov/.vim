@@ -99,7 +99,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf 
 Plug 'junegunn/fzf.vim' " fzf bindings
 Plug 'jiangmiao/auto-pairs' " auto close ', (, [, {, etc.
 Plug 'junegunn/goyo.vim' " for writing prose
-Plug 'airblade/vim-gitgutter' " useful git information
+Plug 'reedes/vim-lexical' " spell check + thesaurus + dictionary
+" Plug 'airblade/vim-gitgutter' " useful git information
 " Plug 'tpope/vim-fugitive'
 " Plug 'tpope/vim-commentary'
 " Plug 'tpope/vim-repeat'
