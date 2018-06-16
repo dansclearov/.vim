@@ -95,11 +95,11 @@ endif
 call plug#begin()
 Plug 'morhetz/gruvbox' " theme
 Plug 'simnalamburt/vim-mundo' " version control using undo ;)
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
-Plug 'junegunn/fzf.vim' " fzf bindings
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
+" Plug 'junegunn/fzf.vim' " fzf bindings
 Plug 'jiangmiao/auto-pairs' " auto close ', (, [, {, etc.
-Plug 'junegunn/goyo.vim' " for writing prose
-Plug 'reedes/vim-lexical' " spell check + thesaurus + dictionary
+" Plug 'junegunn/goyo.vim' " for writing prose
+" Plug 'reedes/vim-lexical' " spell check + thesaurus + dictionary
 " Plug 'airblade/vim-gitgutter' " useful git information
 " Plug 'tpope/vim-fugitive'
 " Plug 'tpope/vim-commentary'
@@ -123,24 +123,24 @@ set background=dark
 colorscheme gruvbox
 " }}}
 " Fzf Vim {{{
-map <leader>f :Files<cr>
-map <leader>b :Buffers<cr>
+" map <leader>f :Files<cr>
+" map <leader>b :Buffers<cr>
 " }}}
 " Goyo {{{
-function! s:goyo_enter()
-  silent !tmux set status off
-  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
-  set background=light
-endfunction
+" function! s:goyo_enter()
+"   silent !tmux set status off
+"   silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+"   set background=light
+" endfunction
 
-function! s:goyo_leave()
-  silent !tmux set status on
-  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
-  set background=dark
-endfunction
+" function! s:goyo_leave()
+"   silent !tmux set status on
+"   silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+"   set background=dark
+" endfunction
 
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
+" autocmd! User GoyoEnter nested call <SID>goyo_enter()
+" autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " }}}
 " }}}
 " vim:foldmethod=marker:foldlevel=0
