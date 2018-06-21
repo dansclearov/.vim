@@ -2,6 +2,9 @@
 " Disable Vi compatibility (recommended to be the first line)
 set nocompatible
 
+" Plugins and indentation based on filetype
+filetype plugin indent on
+
 " Set leader key from '\' to ' '
 let mapleader = " "
 
@@ -15,8 +18,8 @@ set encoding=utf-8
 
 set shiftwidth=4
 set tabstop=4
-set softtabstop=4
 set expandtab " expand tabs into spaces
+
 set autoread " auto read if the file was changed externally
 
 " Remove annoying beeping sound
@@ -39,9 +42,6 @@ set matchtime=1 " match faster
 set title " change the window's title to a more useful one
 set scrolloff=3 " number of lines to keep above/below the cursor
 
-" Plugins and indentation based on filetype
-filetype plugin indent on
-
 set undofile " persistent undo
 
 " Keep swap and undo files centralized
@@ -58,8 +58,6 @@ set smartcase " overrides the ignorecase option when the search pattern contains
 set autoindent " use the indent of the previous line to indent a newly created line
 set smartindent
 set wrap " wrap long lines
-
-set matchpairs+=<:> " add the <:> pair to the pairs string (use % to jump between pairs)
 " }}}
 " Mappings {{{
 " More intuitive j and k navigation, see (https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/)
@@ -114,6 +112,7 @@ Plug 'jiangmiao/auto-pairs' " auto close ', (, [, {, etc.
 " Plug 'junegunn/limelight.vim'
 " Plug 'plasticboy/vim-markdown'
 " Plug 'tpope/vim-surround'
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 " }}}
 " Plugin Configurations {{{
