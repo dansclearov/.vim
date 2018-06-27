@@ -120,6 +120,9 @@ call plug#end()
 let g:gruvbox_italic=1
 set background=dark
 colorscheme gruvbox
+" Spell checking settings needs to be after color scheme settings
+set spell spelllang=en_us
+highlight SpellBad cterm=underline
 " }}}
 " Fzf Vim {{{
 " map <leader>f :Files<cr>
