@@ -1,0 +1,15 @@
+[user]
+    name = dansclearov
+    email = sclearovdan@gmail.com
+    username = dansclearov
+[color]
+    ui = auto
+[push]
+    default = simple
+[credential]
+    helper = cache --timeout=14400 # 4 hours
+[core]
+    autocrlf = input
+    safecrlf = true
+[alias]
+    fast = !git add . && git commit -m 'automated message' && git push

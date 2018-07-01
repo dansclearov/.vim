@@ -16,4 +16,7 @@ ln -rs .tmux/tmux.conf ~/.tmux.conf
 
 # Zsh
 ln -rs .zshrc ~/.zshrc
-ln -rs .oh-my-zsh/ ../.oh-my-zsh
+ln -rs .oh-my-zsh/ ~/.oh-my-zsh
+
+# Git
+ln -rs .gitconfig ~/.gitconfig

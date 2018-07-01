@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/dan/blog/docs/tags/jekyll'
 let g:netrw_dirhist_2='/home/dan/blog/docs/tags'
 let g:netrw_dirhist_3='/home/dan/blog/docs'
 let g:netrw_dirhist_4='/home/dan/blog'
 let g:netrw_dirhist_5='/home/dan'
+let g:netrw_dirhist_6='/home/dan/dotfiles/.git'
