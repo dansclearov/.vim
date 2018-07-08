@@ -11,6 +11,7 @@ plugins=(
   zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting # fish-like features
 )
 source $ZSH/oh-my-zsh.sh
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4' # highlighting which blends better with my theme
 
 export EDITOR="vim"
@@ -29,9 +30,12 @@ alias dcp='g++ -std=c++14 -Wall -Wextra -lm'
 alias release="JEKYLL_ENV=production bundle exec jekyll build -d 'docs'"
 alias devel="bundle exec jekyll liveserve --drafts"
 
+# Source if exists
 # Fzf
 # <C-T> - paste the selected files and directories in the terminal
 # <C-R> - paste the selected command from history into the terminal
 # <A-C> - cd into the selected directory
 # some/path/**<TAB> - autocompletion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Autopairs
+[ -f ~/.autopair.zsh ] && source ~/.autopair.zsh # automatically close brackets

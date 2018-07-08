@@ -93,6 +93,7 @@ endif
 call plug#begin()
 Plug 'morhetz/gruvbox' " theme
 Plug 'simnalamburt/vim-mundo' " version control using undo ;)
+Plug 'jpalardy/vim-slime' " repl integration
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
 " Plug 'junegunn/fzf.vim' " fzf bindings
 Plug 'jiangmiao/auto-pairs' " auto close ', (, [, {, etc.
@@ -123,6 +124,9 @@ colorscheme gruvbox
 " Spell checking settings needs to be after color scheme settings
 set spell spelllang=en_us
 highlight SpellBad cterm=underline
+" }}}
+" Vim Slime {{{
+let g:slime_target = "tmux"
 " }}}
 " Fzf Vim {{{
 " map <leader>f :Files<cr>
