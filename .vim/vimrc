@@ -93,6 +93,7 @@ endif
 call plug#begin()
 Plug 'morhetz/gruvbox' " theme
 Plug 'simnalamburt/vim-mundo' " version control using undo ;)
+Plug 'tpope/vim-surround'
 Plug 'jpalardy/vim-slime' " repl integration
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
 " Plug 'junegunn/fzf.vim' " fzf bindings
