@@ -42,12 +42,6 @@ set matchtime=1 " match faster
 set title " change the window's title to a more useful one
 set scrolloff=3 " number of lines to keep above/below the cursor
 
-set undofile " persistent undo
-
-" Keep swap and undo files centralized
-set directory=~/.vim/.swp//
-set undodir=~/.vim/.undo//
-
 set history=500
 
 set incsearch " incremental search
@@ -64,7 +58,7 @@ set wrap " wrap long lines
 nnoremap <silent> <expr> j v:count ? 'j' : 'gj'
 nnoremap <silent> <expr> k v:count ? 'k' : 'gk'
 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Save files that require root privileges
@@ -89,10 +83,13 @@ endif
 " }}}
 " Plugins {{{
 " All plugins need to be listed between these two lines
-" TODO: install and get confortable with these plugins after learning vim well enough
+" TODO: install and get comfortable with these plugins after learning vim well enough
 call plug#begin()
 Plug 'morhetz/gruvbox' " theme
 Plug 'simnalamburt/vim-mundo' " version control using undo ;)
+Plug 'vimwiki/vimwiki' " personal wiki
+Plug 'mattn/calendar-vim' " calendar to be used along vimwiki
+Plug 'tpope/vim-unimpaired' " useful mappings
 Plug 'tpope/vim-surround'
 Plug 'jpalardy/vim-slime' " repl integration
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
@@ -125,6 +122,12 @@ colorscheme gruvbox
 " Spell checking settings needs to be after color scheme settings
 set spell spelllang=en_us
 highlight SpellBad cterm=underline
+" }}}
+" Calendar Vim {{{
+let g:calendar_monday = 1 " start the week with Monday 
+" }}} 
+" Vimwiki {{{
+let g:vimwiki_list = [{'path': '~/vimwiki/private/'}]
 " }}}
 " Vim Slime {{{
 let g:slime_target = "tmux"
