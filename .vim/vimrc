@@ -130,7 +130,6 @@ let g:NERDTrimTrailingWhitespace = 1 " ...when uncommenting
 " }}} 
 " Calendar Vim {{{
 let g:calendar_monday = 1 " start the week with Monday 
-nnoremap <leader>cal :Calendar
 " }}} 
 " Vimwiki {{{
 let g:vimwiki_list = [{'path': '~/vimwiki/private/'}]
