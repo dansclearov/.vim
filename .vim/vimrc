@@ -54,7 +54,7 @@ set smartindent
 set wrap " wrap long lines
 " }}}
 " Mappings {{{
-" More intuitive j and k navigation, see (https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/)
+" More intuitive j and k navigation
 nnoremap <silent> <expr> j v:count ? 'j' : 'gj'
 nnoremap <silent> <expr> k v:count ? 'k' : 'gk'
 
@@ -91,6 +91,7 @@ Plug 'vimwiki/vimwiki' " personal wiki
 Plug 'mattn/calendar-vim' " calendar to be used along vimwiki
 Plug 'tpope/vim-unimpaired' " useful mappings
 Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter' " comment out stuff
 Plug 'jpalardy/vim-slime' " repl integration
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " install fzf command line utility
 " Plug 'junegunn/fzf.vim' " fzf bindings
@@ -123,8 +124,13 @@ colorscheme gruvbox
 set spell spelllang=en_us
 highlight SpellBad cterm=underline
 " }}}
+" Nerdcommenter {{{
+let g:NERDSpaceDelims = 1 " add space after comment delimiters
+let g:NERDTrimTrailingWhitespace = 1 " ...when uncommenting
+" }}} 
 " Calendar Vim {{{
 let g:calendar_monday = 1 " start the week with Monday 
+nnoremap <leader>cal :Calendar
 " }}} 
 " Vimwiki {{{
 let g:vimwiki_list = [{'path': '~/vimwiki/private/'}]
