@@ -14,6 +14,9 @@ set termguicolors " true color
 " Make the backspace behave in a normal way
 set backspace=indent,eol,start
 
+" Keep .swp files centralized
+set directory=~/.vim/swap//
+
 set encoding=utf-8
 
 set shiftwidth=4
