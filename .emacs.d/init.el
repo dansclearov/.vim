@@ -44,7 +44,7 @@
        " "
        "(" (propertize "%m" 'face 'font-lock-string-face) ")" ; major mode
        " "
-       (propertize "%I" 'face 'font-lock-constant-face) ; size
+       '(:eval (when buffer-file-name (propertize "%I" 'face 'font-lock-constant-face))) ; size
        ))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
