@@ -1,0 +1,6 @@
+# name: Image
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: img
+# --
+![${1:alt text}](${2:URL})
+$0

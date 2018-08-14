@@ -1,0 +1,9 @@
+# name: directives
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: directives
+# --
+# name: $1
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: $2
+# --
+$0

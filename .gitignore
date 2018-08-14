@@ -1,3 +1,11 @@
 .netrwhist
 .vim/plugged/
 .vim/swap/
+\#*\#
+*~
+ac-comphist.dat
+auto-save-list
+eshell/
+elpa/
+ido.last
+recentf

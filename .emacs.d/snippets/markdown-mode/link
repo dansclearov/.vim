@@ -1,0 +1,5 @@
+# name: Link
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: link
+# --
+[${1:link text}](${2:URL}) $0

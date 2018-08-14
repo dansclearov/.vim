@@ -20,3 +20,6 @@ ln -rs .oh-my-zsh/ ~/.oh-my-zsh
 
 # Git
 ln -rs .gitconfig ~/.gitconfig
+
+# Emacs
+ln -rs .emacs.d ~/.emacs.d
