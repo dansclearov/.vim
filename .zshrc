@@ -1,27 +1,8 @@
 export PATH="/home/dan/anaconda3/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH=/home/dan/.oh-my-zsh
-
-GEOMETRY_PROMPT_PREFIX="" # remove the new line
-ZSH_THEME="geometry/geometry"
-
-plugins=(
-  git # common git aliases
-  zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting # fish-like features
-)
-source $ZSH/oh-my-zsh.sh
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4' # highlighting which blends better with my theme
-
-export EDITOR="vim"
-
-# Vim-like keybindings
-bindkey -v 
-bindkey '^R' history-incremental-search-backward
-bindkey '^S' history-incremental-search-forward
-bindkey '^P' history-search-backward
-bindkey '^N' history-search-forward
+# Emacs keybindings
+bindkey -e
 
 # Aliases
 # For competitive programming
