@@ -41,9 +41,9 @@
        "[%*]"
        " "
        (propertize "%b" 'face 'font-lock-keyword-face) ; buffer name
-       " "
-       "(" (propertize "%m" 'face 'font-lock-string-face) ")" ; major mode
-       " "
+       " ("
+       (propertize "%m" 'face 'font-lock-string-face) ; major mode
+       ") "
        '(:eval (when buffer-file-name (propertize "%I" 'face 'font-lock-constant-face))) ; size
        ))
 

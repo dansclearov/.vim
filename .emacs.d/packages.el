@@ -51,3 +51,7 @@
   (setq org-journal-dir "~/org/journal/")
   (setq org-journal-file-format "%Y-%m-%d")
   (setq org-journal-find-file 'find-file))
+(use-package wc-mode
+  :ensure t
+  :init (setq wc-modeline-format "%tw words")
+  :bind ("C-c w" . wc-mode))
