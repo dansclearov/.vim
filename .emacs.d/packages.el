@@ -13,10 +13,25 @@
   :defer t)
 (use-package markdown-mode
   :ensure t)
-(use-package company ; autocompletion
+(use-package yasnippet
   :ensure t
   :config
-  (global-company-mode))
+  (yas-global-mode 1))
+(use-package company ; auto-completion
+  :ensure t
+  :config
+  (global-company-mode)
+  ;; Add yasnippet to company-mode backends
+  (push '(company-semantic :with company-yasnippet) company-backends))
+;; (use-package helm
+;;   :ensure t
+;;   :config (helm-mode 1)
+;;   :bind
+;;   ("M-x" . helm-M-x)
+;;   ("C-x C-f" . helm-find-files))
+;; (use-package ivy
+;;   :ensure t
+;;   :config (ivy-mode 1))
 (use-package dashboard ; startup screen
   :ensure t
   :config
@@ -24,23 +39,15 @@
   (setq dashboard-startup-banner 2)
   (setq dashboard-items '((recents  . 10)
 			  (agenda . 5))))
-(use-package yasnippet
-  :ensure t
-  :config (yas-global-mode 1)
-  :bind
-  ("TAB" . nil) ; disable tab for expansion
-  ("<tab>" . nil) ; some major modes are bad boys
-  ("C-<return>" . yas-expand)
-  ("C-RET" . yas-expand))
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
 (use-package ace-window
   :ensure t
   :bind ("M-o" . ace-window))
-(use-package flyspell-correct
-  :ensure t)
-(use-package flyspell-correct-ido
-  :bind (:map flyspell-mode-map
-	      ("C-;" . flyspell-correct-previous-word-generic)))
-;; (define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
+(use-package org-journal
+  :ensure t
+  :config
+  (setq org-journal-dir "~/org/journal/")
+  (setq org-journal-file-format "%Y-%m-%d")
+  (setq org-journal-find-file 'find-file))

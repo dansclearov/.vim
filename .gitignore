@@ -9,3 +9,5 @@ eshell/
 elpa/
 ido.last
 recentf
+session.*
+.yas-compiled-snippets.el

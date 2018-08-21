@@ -9,6 +9,9 @@
 ;; Refresh if changed outside of emacs
 (global-auto-revert-mode 1)
 
+;; Don't insert tabs
+(setq-default indent-tabs-mode nil)
+
 ;; Who use the bar to scroll?
 (scroll-bar-mode 0)
 

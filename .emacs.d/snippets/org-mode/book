@@ -1,0 +1,11 @@
+# name: book
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: book
+
+# --
+$1
+:PROPERTIES:
+:Title: $1
+:Authors: $2
+:Goodreads: $3
+:END:$0

@@ -2,7 +2,6 @@
   :config (progn
 	    (setq dired-recursive-copies 'always
 		  dired-recursive-deletes 'always)
-	    
 		  ;; Dired listing switches
 		  ;;  -a : Do not ignore entries starting with .
 		  ;;  -l : Use long listing format.
@@ -17,4 +16,6 @@
   :bind (("C-c l" . org-store-link)
 	 ("C-c a" . org-agenda)
 	 ("C-c c" . org-capture)
-	 ("C-c b" . org-switchb)))
+	 ("C-c b" . org-switchb))
+  :hook (org-mode . org-indent-mode)
+  :init (setq org-property-format "%s %s"))
