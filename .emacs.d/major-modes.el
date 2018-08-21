@@ -18,4 +18,6 @@
 	 ("C-c c" . org-capture)
 	 ("C-c b" . org-switchb))
   :hook (org-mode . org-indent-mode)
-  :init (setq org-property-format "%s %s"))
+  :init
+  (setq org-property-format "%s %s")
+  (setq org-startup-truncated nil))

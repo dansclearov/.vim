@@ -34,6 +34,8 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
+(setq-default word-wrap t)
+
 (setq-default cursor-type 'bar)
 
 (setq-default mode-line-format
