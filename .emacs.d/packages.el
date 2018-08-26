@@ -32,13 +32,6 @@
 ;; (use-package ivy
 ;;   :ensure t
 ;;   :config (ivy-mode 1))
-(use-package dashboard ; startup screen
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook)
-  (setq dashboard-startup-banner 2)
-  (setq dashboard-items '((recents  . 10)
-			  (agenda . 5))))
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
