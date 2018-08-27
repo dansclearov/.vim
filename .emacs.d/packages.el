@@ -17,7 +17,9 @@
   :ensure t
   :config
   (yas-global-mode 1))
-(use-package company ; auto-completion
+(use-package racket-mode
+  :ensure t)
+(use-package company
   :ensure t
   :config
   (global-company-mode)
@@ -32,19 +34,25 @@
 ;; (use-package ivy
 ;;   :ensure t
 ;;   :config (ivy-mode 1))
+(use-package haskell-mode
+  :ensure t
+  :config (setq haskell-process-type 'stack-ghci))
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
 (use-package ace-window
   :ensure t
   :bind ("M-o" . ace-window))
+;; (use-package flycheck
+;;   :ensure t
+;;   :config (global-flycheck-mode))
 (use-package org-journal
   :ensure t
   :config
   (setq org-journal-dir "~/org/journal/")
   (setq org-journal-file-format "%Y-%m-%d")
   (setq org-journal-find-file 'find-file))
-(use-package wc-mode
-  :ensure t
-  :init (setq wc-modeline-format "%tw words")
-  :bind ("C-c w" . wc-mode))
+;; (use-package wc-mode
+;;   :ensure t
+;;   :init (setq wc-modeline-format "%tw words")
+;;   :bind ("C-c w" . wc-mode))
