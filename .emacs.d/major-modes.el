@@ -20,4 +20,5 @@
   :init
   (setq org-property-format "%s %s")
   (setq org-startup-truncated nil)
-  (setq org-src-fontify-natively t))
+  (setq org-src-fontify-natively t)
+  (setq org-highlight-latex-and-related '(latex)))

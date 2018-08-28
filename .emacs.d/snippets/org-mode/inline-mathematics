@@ -1,0 +1,5 @@
+# name: inline-mathematics
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: \
+# --
+\\( $0 \\)

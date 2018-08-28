@@ -28,6 +28,9 @@
 ;; Prevent the cursor from blinking
 (blink-cursor-mode 0)
 
+;; Open file with cursor at the position you left it
+(save-place-mode)
+
 ;; Enable flyspell only on modes derived from text mode
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))

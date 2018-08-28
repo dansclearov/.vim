@@ -1,0 +1,18 @@
+;;; -*- coding: utf-8 -*-
+(("/home/dan/Dropbox/org/books/An Introduction to Statistical Learning: With Applications in R.tex" . 1089)
+ ("/home/dan/dotfiles/.emacs.d/packages.el" . 1291)
+ ("/home/dan/Dropbox/org/books/An Introduction to Statistical Learning: With Applications in R.org" . 470)
+ ("/home/dan/.emacs.d/snippets/org-mode/latex" . 79)
+ ("/home/dan/.emacs.d/snippets/org-mode/inline-mathematics" . 88)
+ ("/home/dan/.emacs.d/snippets/latex-mode/begin" . 103)
+ ("/home/dan/.emacs.d/snippets/org-mode/"
+  (dired-filename . "/home/dan/.emacs.d/snippets/org-mode/.."))
+ ("/home/dan/.emacs.d/snippets/"
+  (dired-filename . "/home/dan/.emacs.d/snippets/latex-mode"))
+ ("/home/dan/.emacs.d/snippets/latex-mode/"
+  (dired-filename . "/home/dan/.emacs.d/snippets/latex-mode/mathbf"))
+ ("/home/dan/.emacs.d/snippets/markdown-mode/"
+  (dired-filename . "/home/dan/.emacs.d/snippets/markdown-mode/img"))
+ ("/home/dan/_region_.tex" . 223)
+ ("/home/dan/.emacs.d/elpa/auctex-12.1.1/auctex-autoloads.el" . 10573)
+ ("/home/dan/Dropbox/org/books.org" . 24))

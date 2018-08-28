@@ -36,18 +36,37 @@
 ;;   :config (ivy-mode 1))
 (use-package haskell-mode
   :ensure t
+  :defer t
   :config (setq haskell-process-type 'stack-ghci))
+(use-package tex-site
+  :ensure auctex
+  :config
+  (setq TeX-PDF-mode t)
+  (setq TeX-auto-save t)
+  (setq TeX-parse-self t)
+  (setq-default TeX-master nil))
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
 (use-package ace-window
   :ensure t
   :bind ("M-o" . ace-window))
+(use-package pdf-tools
+  :ensure t
+  :config
+  (pdf-tools-install)
+  ;; Use pdf-tools to open PDF files
+  (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+        TeX-source-correlate-start-server t)
+
+  ;; Update PDF buffers after successful LaTeX runs
+  :hook (TeX-after-compilation-finished-functions . TeX-revert-document-buffer))
 ;; (use-package flycheck
 ;;   :ensure t
 ;;   :config (global-flycheck-mode))
 (use-package org-journal
   :ensure t
+  :defer t
   :config
   (setq org-journal-dir "~/org/journal/")
   (setq org-journal-file-format "%Y-%m-%d")

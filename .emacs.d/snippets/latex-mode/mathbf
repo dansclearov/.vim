@@ -1,0 +1,5 @@
+# name: mathbf
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: mathbf
+# --
+\mathbf{$1}$0

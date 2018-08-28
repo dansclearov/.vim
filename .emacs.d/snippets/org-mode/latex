@@ -1,0 +1,9 @@
+# name: latex
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: latex
+# --
+#+BEGIN_LaTeX latex
+\[
+$0
+\]
+#+END_LaTeX

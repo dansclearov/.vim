@@ -1,0 +1,7 @@
+# name: \begin{ ... } ... \end{ ... }
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: begin
+# --
+\begin{$1}
+$0
+\end{$1}
