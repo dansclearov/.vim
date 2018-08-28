@@ -1,6 +1,8 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/dan/dotfiles/.emacs.d/packages.el" . 1338)
- ("/home/dan/Dropbox/org/books/An Introduction to Statistical Learning: With Applications in R.tex" . 1328)
+(("/home/dan/Dropbox/org/books/An Introduction to Statistical Learning: With Applications in R.tex" . 704)
+ ("/home/dan/Dropbox/books/ISLR Seventh Printing.pdf" . 11156793)
+ ("/home/dan/dotfiles/.emacs.d/packages.el" . 1172)
+ ("/home/dan/Dropbox/org/todo.org" . 605)
  ("/home/dan/Dropbox/org/books/An Introduction to Statistical Learning: With Applications in R.org" . 470)
  ("/home/dan/.emacs.d/snippets/org-mode/latex" . 79)
  ("/home/dan/.emacs.d/snippets/org-mode/inline-mathematics" . 88)

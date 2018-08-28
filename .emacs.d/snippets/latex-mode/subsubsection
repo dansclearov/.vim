@@ -1,0 +1,6 @@
+# name: subsubsection
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: subsubsec
+# --
+\subsubsection{${1:name}}
+$0

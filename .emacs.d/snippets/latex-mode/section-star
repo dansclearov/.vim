@@ -1,5 +1,6 @@
-# name: mathbf
+# name: section-star
 # contributor: Dan Sclearov <dansclearov@gmail.com>
-# key: mathbf
+# key: sec*
 # --
-\mathbf{${1:expression}}$0
+\section*{${1:name}}
+$0
