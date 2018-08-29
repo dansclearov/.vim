@@ -2,4 +2,5 @@
 # contributor: Dan Sclearov <dansclearov@gmail.com>
 # key: par
 # --
-\paragraph{${1:name}}$0
+\paragraph{${1:name}}
+$0

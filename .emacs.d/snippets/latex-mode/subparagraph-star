@@ -2,4 +2,5 @@
 # contributor: Dan Sclearov <dansclearov@gmail.com>
 # key: subpar*
 # --
-\subparagraph*{${1:name}}$0
+\subparagraph*{${1:name}}
+$0
