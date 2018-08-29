@@ -1,0 +1,5 @@
+# name: paragraph
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: subpar*
+# --
+\subparagraph*{${1:name}}$0

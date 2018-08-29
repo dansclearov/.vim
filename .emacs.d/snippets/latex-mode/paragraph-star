@@ -1,5 +1,5 @@
-# name: inline-mathematics
+# name: paragraph
 # contributor: Dan Sclearov <dansclearov@gmail.com>
-# key: \
+# key: par*
 # --
-\\( $1 \\)$0
+\paragraph*{${1:name}}$0
