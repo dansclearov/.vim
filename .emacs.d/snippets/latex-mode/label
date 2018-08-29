@@ -1,7 +1,6 @@
-# name: subsection
+# name: label
 # contributor: Dan Sclearov <dansclearov@gmail.com>
-# key: subsec
+# key: lab
 # --
-\subsection{${1:name}}
-
+\label{${1:label}}
 $0

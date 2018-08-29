@@ -3,4 +3,5 @@
 # key: par
 # --
 \paragraph{${1:name}}
+
 $0

@@ -3,4 +3,5 @@
 # key: subsec*
 # --
 \subsection*{${1:name}}
+
 $0
