@@ -1,0 +1,7 @@
+# name: int main(void) { ... }
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: main
+# --
+int main(void) {
+    $0
+}

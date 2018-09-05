@@ -1,0 +1,5 @@
+# name: summation
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: sum
+# --
+\sum_{${1:i=1}}^{${2:n}} $0

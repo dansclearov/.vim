@@ -46,6 +46,9 @@
 (use-package fish-mode
   :ensure t)
 
+(use-package nov
+  :ensure t)
+
 (use-package haskell-mode
   :ensure t
   :defer t
