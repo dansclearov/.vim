@@ -26,6 +26,9 @@
 
 (use-package peep-dired
   :ensure t
+  :defer t ; ...until dired is loaded
+  :bind (:map dired-mode-map
+              ("P" . peep-dired))
   :config
   (setq peep-dired-cleanup-on-disable t)
   (setq peep-dired-enable-on-directories t)
