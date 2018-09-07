@@ -1,0 +1,7 @@
+# name: while ( ... ) { ... }
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: while
+# --
+while (${1:true}) {
+      $0
+}

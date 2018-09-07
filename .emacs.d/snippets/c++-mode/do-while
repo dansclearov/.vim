@@ -1,0 +1,7 @@
+# name: do { ... } while ( ... )
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: do
+# --
+do {
+   $0
+} while ($1)

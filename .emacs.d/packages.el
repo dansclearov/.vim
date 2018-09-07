@@ -20,7 +20,16 @@
   :ensure t
   :config
   (yas-global-mode 1)
-  (setq yas-triggers-in-field t))
+  (setq yas-triggers-in-field t)
+  (setq yas-indent-line 'auto)
+  (setq yas-also-auto-indent-first-line t))
+
+(use-package peep-dired
+  :ensure t
+  :config
+  (setq peep-dired-cleanup-on-disable t)
+  (setq peep-dired-enable-on-directories t)
+  (setq peep-dired-ignored-extensions '("mkv" "iso" "mp4")))
 
 (use-package racket-mode
   :ensure t)

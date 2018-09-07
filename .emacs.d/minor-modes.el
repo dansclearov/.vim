@@ -31,6 +31,12 @@
 ;; Open file with cursor at the position you left it
 (save-place-mode)
 
+(setq whitespace-style (quote (face tabs newline tab-mark newline-mark )))
+(setq whitespace-display-mappings
+      '((space-mark 32 [183] [46])
+        (newline-mark 10 [8629 10])
+        (tab-mark 9 [9655 9] [92 9])))
+
 ;; Enable flyspell only on modes derived from text mode
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
