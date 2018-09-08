@@ -8,7 +8,7 @@
 (setq user-full-name "Dan Sclearov"
       user-mail-address "dansclearov@gmail.com")
 
-(load-theme 'gruvbox t)
+(load-theme 'zenburn t)
 
 ;; Don't use messages that you don't read
 (setq initial-scratch-message "")

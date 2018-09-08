@@ -1,0 +1,7 @@
+# name: if ( ... ) { ... }
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: if
+# --
+if ($1) {
+   $0
+}
