@@ -1,16 +1,22 @@
 (use-package dired
-  :config (progn
-	    (setq dired-recursive-copies 'always
-		  dired-recursive-deletes 'always)
-		  ;; Dired listing switches
-		  ;;  -a : Do not ignore entries starting with .
-		  ;;  -l : Use long listing format.
-		  ;;  -G : Do not print group names like 'users'
-		  ;;  -h : Human-readable sizes like 1K, 234M, ..
-		  ;;  -v : Do natural sort .. so the file names starting with . will show up first.
-		  ;;  -F : Classify filenames by appending '*' to executables,
-		  ;;       '/' to directories, etc.
-		  (setq dired-listing-switches "-alGhvF --group-directories-first"))) ; default: "-al"
+  :bind (:map dired-mode-map
+              ;; Make dired use the existing buffer, instead of creating a new one
+              ("RET" . dired-find-alternate-file)
+              ("^" . (lambda () (interactive) (find-alternate-file ".."))))
+  :config
+  (setq dired-recursive-copies 'always
+        dired-recursive-deletes 'always)
+
+  (setq dired-dwim-target t) ; copy or move to the directory in the other window
+  ;; Dired listing switches:
+  ;;  -a :: Do not ignore entries starting with .
+  ;;  -l :: Use long listing format.
+  ;;  -G :: Do not print group names like 'users'
+  ;;  -h :: Human-readable sizes like 1K, 234M, ..
+  ;;  -v :: Do natural sort .. so the file names starting with . will show up first.
+  ;;  -F :: Classify filenames by appending '*' to executables,
+  ;;       '/' to directories, etc.
+  (setq dired-listing-switches "-alGhvF --group-directories-first")) ; default: "-al"
 
 (use-package org-mode
   :bind (("C-c l" . org-store-link)

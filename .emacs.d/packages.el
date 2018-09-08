@@ -26,7 +26,6 @@
 
 (use-package peep-dired
   :ensure t
-  :defer t ; ...until dired is loaded
   :bind (:map dired-mode-map
               ("P" . peep-dired))
   :config

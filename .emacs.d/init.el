@@ -26,6 +26,9 @@
 
 (setq custom-file "~/.emacs.d/custom.el")
 
+;; Enable all disabled commands
+(setq disabled-command-function nil)
+
 ;; UTF-8 as default encoding
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
