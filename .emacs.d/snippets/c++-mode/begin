@@ -1,0 +1,5 @@
+# name: arr.begin(), arr.end()
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: begin
+# --
+${1:arr}.begin, $1.begin

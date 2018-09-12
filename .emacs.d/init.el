@@ -8,7 +8,7 @@
 (setq user-full-name "Dan Sclearov"
       user-mail-address "dansclearov@gmail.com")
 
-(load-theme 'zenburn t)
+(load-theme 'gruvbox t)
 
 ;; Don't use messages that you don't read
 (setq initial-scratch-message "")
@@ -36,6 +36,10 @@
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
+
+(setq c-default-style "java")
+
+(setq-default indent-tabs-mode nil)
 
 (setq-default word-wrap t)
 

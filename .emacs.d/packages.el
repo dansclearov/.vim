@@ -22,7 +22,13 @@
   (yas-global-mode 1)
   (setq yas-triggers-in-field t)
   (setq yas-indent-line 'auto)
-  (setq yas-also-auto-indent-first-line t))
+  (setq yas-also-auto-indent-first-line t)
+  (setq yas/indent-line 'fixed))
+
+(use-package aggressive-indent
+  :ensure t
+  :config
+  (global-aggressive-indent-mode 1))
 
 (use-package peep-dired
   :ensure t
@@ -36,6 +42,19 @@
 
 (use-package racket-mode
   :ensure t)
+
+;; (use-package sr-speedbar
+;;   :ensure t
+;;   :bind
+;;   ("C-," . sr-speedbar-toggle))
+
+(use-package origami
+  :ensure t
+  :config (global-origami-mode)
+  :bind
+  ("C-'" . origami-forward-toggle-node)
+  ("C-M-'" . origami-recursively-toggle-node)
+  ("C-\"" . origami-show-only-node))
 
 (use-package company
   :ensure t
