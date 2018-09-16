@@ -3,5 +3,5 @@
 # key: while
 # --
 while (${1:true}) {
-      $0
+    $0
 }

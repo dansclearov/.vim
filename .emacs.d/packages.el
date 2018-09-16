@@ -25,10 +25,21 @@
   (setq yas-also-auto-indent-first-line t)
   (setq yas/indent-line 'fixed))
 
-(use-package aggressive-indent
+;; (use-package aggressive-indent
+;;   :ensure t
+;;   :config
+;;   (global-aggressive-indent-mode 1))
+
+(use-package define-word
   :ensure t
-  :config
-  (global-aggressive-indent-mode 1))
+  :bind
+  ("C-c d" . define-word-at-point)
+  ("C-c D" . define-word))
+
+;; (use-package synosaurus
+;;   :ensure t
+;;   :config
+;;   (synosaurus-mode))
 
 (use-package peep-dired
   :ensure t
@@ -113,6 +124,11 @@
 ;;   :ensure t
 ;;   :config (global-flycheck-mode))
 
+(use-package elfeed
+  :ensure t
+  :bind
+  ("C-x w" . elfeed))
+
 (use-package org-journal
   :ensure t
   :defer t
@@ -120,6 +136,28 @@
   (setq org-journal-dir "~/org/journal/")
   (setq org-journal-file-format "%Y-%m-%d")
   (setq org-journal-find-file 'find-file))
+
+;; Does what ido-everywhere is supposed to do
+(use-package ido-completing-read+
+  :ensure t
+  :config
+  (ido-ubiquitous-mode 1))
+
+;; (use-package ido-vertical-mode
+;;   :ensure t
+;;   :init
+;;   (ido-vertical-mode 1)
+;;   (setq ido-vertical-define-keys 'C-n-and-C-p-only))
+
+;; Enhanced M-x
+(use-package smex
+  :ensure t
+  :config
+  (smex-initialize)
+  :bind
+  ("M-x" . smex)
+  ("M-X" . smex-major-mode-commands)
+  ("C-c C-c M-x" . execute-extended-command)) ; old M-x
 
 ;; (use-package wc-mode
 ;;   :ensure t

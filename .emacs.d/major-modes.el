@@ -27,4 +27,9 @@
   (setq org-property-format "%s %s")
   (setq org-startup-truncated nil)
   (setq org-src-fontify-natively t)
-  (setq org-highlight-latex-and-related '(latex)))
+  (setq org-highlight-latex-and-related '(latex))
+  (setq org-capture-templates
+    '(("t" "Todo" entry (file (concat org-directory "/todo.org"))
+       "** TODO %?\n")
+      ("T" "Todo with Clipboard" entry (file (concat org-directory "/todo.org"))
+       "** TODO %?\n   %c"))))

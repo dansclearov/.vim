@@ -6,27 +6,6 @@
   (setq ido-enable-flex-matching t)
   (setq ido-everywhere t))
 
-;; Does what ido-everywhere is supposed to do
-(use-package ido-completing-read+
-  :ensure t
-  :config
-  (ido-ubiquitous-mode 1))
-
-(use-package ido-vertical-mode
-  :ensure t
-  :init
-  (ido-vertical-mode 1)
-  (setq ido-vertical-define-keys 'C-n-and-C-p-only))
-
-;; Enhanced M-x
-(use-package smex
-  :ensure t
-  :config
-  (smex-initialize)
-  :bind
-  ("M-x" . smex)
-  ("M-X" . smex-major-mode-commands)
-  ("C-c C-c M-x" . execute-extended-command)) ; old M-x
 
 ;; Highlight matching bracket, parentheses, etc.
 (show-paren-mode 1)
