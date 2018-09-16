@@ -33,6 +33,9 @@
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome") ; open links in Chrome
+
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)

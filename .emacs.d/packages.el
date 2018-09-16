@@ -127,7 +127,11 @@
 (use-package elfeed
   :ensure t
   :bind
-  ("C-x w" . elfeed))
+  ("C-x w" . elfeed)
+  :config
+  (load "~/.emacs.d/private/elfeed-feeds.el")
+
+  (setq-default elfeed-search-filter "@1-week-ago +unread "))
 
 (use-package org-journal
   :ensure t
