@@ -1,0 +1,5 @@
+# name: \mathcal{ ... }
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: mathcal
+# --
+\mathcal{$1}$0
