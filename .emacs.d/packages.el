@@ -71,6 +71,11 @@
   :ensure t
   :config
   (global-company-mode)
+
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 0)
+  (setq company-selection-wrap-around t)
+  (setq company-tooltip-align-annotations t)
   ;; Add yasnippet to company-mode backends
   (push '(company-semantic :with company-yasnippet) company-backends))
 
@@ -104,8 +109,17 @@
   ;; Use pdf-tools to open PDF files
   (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
         TeX-source-correlate-start-server t)
+
   ;; Update PDF buffers after successful LaTeX runs
   :hook (TeX-after-compilation-finished-functions . TeX-revert-document-buffer))
+
+;; (use-package recentf
+;;   :ensure t
+;;   :config
+;;   (recentf-mode 1)
+;;   (setq recentf-max-menu-items 25)
+;;   :bind
+;;   ("C-x C-r" . recentf-open-files))
 
 (use-package expand-region
   :ensure t
@@ -144,6 +158,11 @@
   (setq org-journal-dir "~/org/journal/")
   (setq org-journal-file-format "%Y-%m-%d")
   (setq org-journal-find-file 'find-file))
+
+(use-package perspective
+  :ensure t
+  :config
+  (persp-mode))
 
 ;; Does what ido-everywhere is supposed to do
 (use-package ido-completing-read+

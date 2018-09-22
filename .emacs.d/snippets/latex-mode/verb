@@ -1,0 +1,5 @@
+# name: \verb| ... |
+# contributor: Dan Sclearov <dansclearov@gmail.com>
+# key: verb
+# --
+\verb|$1|$0
