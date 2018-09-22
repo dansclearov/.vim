@@ -40,8 +40,6 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-(setq tab-always-indent 'complete)
-
 (setq c-default-style "java")
 
 (setq-default indent-tabs-mode nil)

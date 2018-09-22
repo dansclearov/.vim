@@ -71,13 +71,24 @@
   :ensure t
   :config
   (global-company-mode)
-
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 0)
   (setq company-selection-wrap-around t)
   (setq company-tooltip-align-annotations t)
+
   ;; Add yasnippet to company-mode backends
-  (push '(company-semantic :with company-yasnippet) company-backends))
+  (push '(company-semantic :with company-yasnippet) company-backends)
+  :bind (:map company-active-map
+              ("<return>" . nil)
+              ("C-<return>" . company-complete-selection)))
+
+(use-package smart-comment
+  :bind ("M-;" . smart-comment))
+
+(use-package company-quickhelp
+  :ensure t
+  :config
+  (company-quickhelp-mode))
 
 ;; (use-package helm
 ;;   :ensure t
