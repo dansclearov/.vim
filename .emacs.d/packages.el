@@ -67,6 +67,12 @@
   ("C-M-'" . origami-recursively-toggle-node)
   ("C-\"" . origami-show-only-node))
 
+(use-package multiple-cursors
+  :ensure t
+  :bind
+  ("C->" . mc/mark-next-like-this)
+  ("C-<" . mc/mark-previous-like-this))
+
 (use-package company
   :ensure t
   :config
@@ -80,6 +86,9 @@
   (push '(company-semantic :with company-yasnippet) company-backends)
   :bind (:map company-active-map
               ("<return>" . nil)
+              ("RET" . nil)
+              ("TAB" . nil)
+              ("<tab>" . nil)
               ("C-<return>" . company-complete-selection)))
 
 (use-package smart-comment

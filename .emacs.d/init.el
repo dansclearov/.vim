@@ -60,3 +60,8 @@
        ))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "C-o") (lambda ()
+                              (interactive)
+                              (other-window -1)))
