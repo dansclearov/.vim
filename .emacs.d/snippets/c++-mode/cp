@@ -7,6 +7,69 @@
 
 using namespace std;
 
+template <typename T1, typename T2>
+inline ostream& operator<<(ostream& os, const pair<T1, T2>& p) {
+    return os << "(" << p.first << ", " << p.second << ")";
+}
+
+template<typename T>
+inline ostream& operator<<(ostream& os, const vector<T>& v) {
+    bool first = true;
+    os << "[";
+    for (unsigned int i = 0; i < v.size(); i++) {
+        if (!first) os << ", ";
+        os << v[i];
+        first = false;
+    }
+    return os << "]";
+}
+
+template<typename T>
+inline ostream& operator<<(ostream& os, const set<T>& v) {
+    bool first = true;
+    os << "[";
+    for (typename set<T>::const_iterator ii = v.begin(); ii != v.end(); ++ii) {
+        if (!first)
+            os << ", ";
+        os << *ii;
+        first = false;
+    }
+    return os << "]";
+}
+
+template<typename T1, typename T2>
+inline ostream& operator<<(ostream& os, const map<T1, T2>& v) {
+    bool first = true;
+    os << "[";
+    for (typename map<T1, T2>::const_iterator ii = v.begin(); ii != v.end(); ++ii) {
+        if(!first) os << ", ";
+        os << *ii;
+        first = false;
+    }
+    return os << "]";
+}
+
+struct debugger {
+    bool first;
+
+    debugger() {
+	first = true;
+    }
+
+    template<typename T> debugger& operator , (const T& v) {
+    	if (!first) cout << ", ";
+        cout << v;
+        first = false;
+        return *this;
+    }
+};
+
+#ifndef ONLINE_JUDGE
+    #define debug(args...)          { cout << #args << ": "; (debugger()), args; cout << endl; }
+#else
+    #define debug(args...)
+#endif
+
 #define int long long
 
 const long long inf = 1e18;
@@ -18,6 +81,8 @@ template <typename T> T max(T a, T b, T c) { return max(a, max(b, c)); }
 template <typename T> T min(T a, T b, T c) { return min(a, min(b, c)); }
 
 int32_t main(void) { ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+#endif
     $0
 }

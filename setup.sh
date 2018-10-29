@@ -23,3 +23,6 @@ ln -rs .gitconfig ~/.gitconfig
 
 # Emacs
 ln -rs .emacs.d ~/.emacs.d
+
+# Spacemacs
+ln -rs .spacemacs.d ~/.spacemacs.d

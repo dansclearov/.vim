@@ -67,6 +67,12 @@
   ("C-M-'" . origami-recursively-toggle-node)
   ("C-\"" . origami-show-only-node))
 
+(use-package eyebrowse
+  :ensure t
+  :config
+  (eyebrowse-mode t)
+  (setq eyebrowse-new-workspace t))
+
 (use-package multiple-cursors
   :ensure t
   :bind
